@@ -3,7 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { SITE } from "../config/site";
 
 export default function SEO({ title, description, path = "/" }) {
-  const fullTitle = title ? `${title} | ${SITE.brand}` : `${SITE.brand} | Diseño Web Mendoza`;
+  const fullTitle = title
+    ? (title.includes("|") ? title : `${title} | ${SITE.brand}`)
+    : `${SITE.brand} | Diseño Web Mendoza`;
   const desc = description || SITE.tagline;
   const canonical = SITE.domain ? `https://${SITE.domain}${path}` : undefined;
 
