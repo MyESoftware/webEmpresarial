@@ -9,6 +9,7 @@ import Servicios from "./pages/Servicios";
 import Portfolio from "./pages/Portfolio";
 import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
+import Propuestas from "./pages/Propuestas";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Servicios />} />
+        <Route path="/propuestas" element={<Propuestas />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contacto" element={<Contacto />} />
