@@ -88,7 +88,7 @@ export default function Contacto() {
 
               <div className="space-y-3">
                 <label className="label" htmlFor="empresa">Nombre de tu Marca</label>
-                <input id="empresa" className="input" placeholder="Ej: Noche Mendocina" value={empresa} onChange={(e) => setEmpresa(e.target.value)} />
+                <input id="empresa" className="input" placeholder="Ej: Coca Cola" value={empresa} onChange={(e) => setEmpresa(e.target.value)} />
               </div>
 
               <div className="space-y-3">

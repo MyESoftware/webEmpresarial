@@ -72,7 +72,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <Link to="/contacto" className="btn btn-outline w-full mt-10">Hacer una consulta</Link>
             </div>
           </div>
         </div>
