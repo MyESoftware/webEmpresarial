@@ -67,7 +67,6 @@ export default function Contacto() {
                 </div>
                 <div className="flex flex-wrap gap-4">
                   <a className="btn btn-outline text-xs px-5" href={SITE.social.instagram} target="_blank" rel="noreferrer">Instagram</a>
-                  <a className="btn btn-outline text-xs px-5" href={SITE.social.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
                 </div>
               </div>
             </div>

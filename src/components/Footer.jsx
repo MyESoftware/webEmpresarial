@@ -27,8 +27,6 @@ export default function Footer() {
             <div className="mt-6 flex gap-4 text-slate-500">
                {/* Iconos de redes rápidos */}
                <a href={SITE.social.instagram} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><Instagram size={20} /></a>
-               <a href={SITE.social.linkedin} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><Linkedin size={20} /></a>
-               <a href={SITE.social.github} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><Github size={20} /></a>
             </div>
           </div>
 
