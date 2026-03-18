@@ -59,7 +59,7 @@ export default function Home() {
               <div className="space-y-4">
                 {[
                   ["Charla inicial", "Definimos objetivos claros para tu negocio."],
-                  ["Plan a medida", "Elegimos la tecnología (React/Angular) ideal."],
+                  ["Plan a medida", "Elegimos la tecnología ideal."],
                   ["Desarrollo", "Construimos tu sitio con código limpio y rápido."],
                   ["Lanzamiento", "Tu negocio online funcionando al 100%."],
                 ].map(([t, d], i) => (
@@ -111,7 +111,8 @@ export default function Home() {
                 ¿Por qué React/Angular y no WordPress?
               </h3>
               <p className="text-slate-400 text-sm mt-4 leading-relaxed">
-                A diferencia de las plantillas lentas y vulnerables de WordPress, desarrollamos software con tecnologías de alto rendimiento.
+                A diferencia de las plantillas lentas y vulnerables de WordPress u otro sistema de gestion de contenido, nosotros desarrollamos software con tecnologías de alto rendimiento, modernas e independientes.
+                La pagina es solamente tuya, segura y escalable.
               </p>
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 {[

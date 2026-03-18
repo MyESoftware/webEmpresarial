@@ -6,7 +6,7 @@ import { CheckCircle2, Terminal, Users2, Rocket } from "lucide-react";
 const valores = [
   {
     t: "Enfoque en negocio",
-    d: "No diseñamos 'páginas lindas', creamos herramientas de venta con CTAs claros y fricción mínima.",
+    d: "No diseñamos 'páginas lindas', creamos herramientas de ventas.",
     icon: <Rocket className="text-emerald-500" size={24} />
   },
   {
@@ -16,7 +16,7 @@ const valores = [
   },
   {
     t: "ADN Programador",
-    d: "Dominamos el stack técnico profesional (Java, React, SQL). Nada de plantillas limitadas.",
+    d: "Dominamos el stack técnico profesional (Java, React, SQL). Nada de plantillas limitadas, dependientes o inseguras.Permitiendole a tu pagina crecer sin limites",
     icon: <Terminal className="text-emerald-500" size={24} />
   }
 ];

@@ -8,7 +8,7 @@ export const SITE = {
   whatsappNumber: "5492612133276", 
 
   social: {
-    instagram: "https://instagram.com/tuusuario",
+    instagram: "https://www.instagram.com/myesoftware/",
     linkedin: "https://linkedin.com/in/tuusuario",
     github: "https://github.com/tuusuario",
   },

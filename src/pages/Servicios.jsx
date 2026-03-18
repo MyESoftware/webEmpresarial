@@ -9,7 +9,7 @@ const pasosProceso = [
   { id: 1, t: "Brief (15 min)", d: "Definimos objetivo, público, oferta y material base.", icon: <Layout size={20} /> },
   { id: 2, t: "Propuesta", d: "Estructura lógica, copy persuasivo y diseño base.", icon: <Zap size={20} /> },
   { id: 3, t: "Construcción", d: "Desarrollo robusto con optimización de carga y performance.", icon: <Cpu size={20} /> },
-  { id: 4, t: "Publicación", d: "Deploy, configuración de dominio y checklist SEO.", icon: <Search size={20} /> },
+  { id: 4, t: "Publicación", d: "Deploy, configuración de dominio y checklist.", icon: <Search size={20} /> },
   { id: 5, t: "Mantenimiento", d: "Soporte preventivo, actualizaciones y mejoras constantes.", icon: <Settings size={20} /> },
 ];
 

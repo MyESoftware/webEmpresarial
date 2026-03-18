@@ -8,7 +8,7 @@ const propuestas = [
     level: "Nivel 01",
     name: "Landing Page Express",
     price: "$180.000",
-    details: ["One-Page", "Botón WhatsApp", "Carga <1s", "SEO Base"],
+    details: ["Hasta 3 secciones", "Botón a chat de WhatsApp", "Carga rapida", "Tu vidriera Virtual"],
   },
   {
     level: "Nivel 02",
@@ -39,7 +39,7 @@ const propuestas = [
 const faqItems = [
   {
     q: "¿Cuánto tardan los proyectos?",
-    a: "La demora depende de la complejidad: Nivel 01 (7 días), Nivel 02 (15-20 días), Niveles 03 y 04 (30-45 días).",
+    a: "La demora depende de la complejidad: Desde los 7 dias el mas simple",
   },
   {
     q: "¿Dónde están ubicados?",
@@ -49,6 +49,13 @@ const faqItems = [
     q: "¿La web es mía?",
     a: "Sí, el código es de tu propiedad y entregamos el acceso total una vez finalizado el pago.",
   },
+   {
+    q: "¿Por que elegir nuestras tecnologias?",
+    a: "A diferencia de las plataformas tradicionales como WordPress, que cargan cientos de archivos innecesarios cada vez que un usuario entra, una web desarrollada en React o Angular funciona como una aplicación de alto rendimiento, el sitio se entrega al navegador de forma optimizada y ligera, permitiendo que la carga sea prácticamente instantánea. Google premia esta velocidad dándote mejores posiciones en los resultados de búsqueda (SEO), y tus clientes no se van frustrados por esperas largas; Y al no depender de plataformas tenemos libertad en diseños y funcionalidades, pemitiendo escalar sin limites.",
+  },  {
+    q: "¿Es seguro?",
+    a: "Sí,Al elegir un desarrollo a medida con hosting propio y tecnologías modernas, eliminás de raíz el 90% de las vulnerabilidades que sufren los sitios web hoy en día. Las plataformas masivas son el blanco preferido de los hackers porque dependen de plugins de terceros que suelen tener fallos de seguridad. En MyE, nosotros escribimos el código; no hay puertas traseras ni complementos desconocidos. Al tener tu propio servidor, vos tenés el control total de tu información y la de tus clientes.",
+  }
 ];
 
 export default function Propuestas() {
