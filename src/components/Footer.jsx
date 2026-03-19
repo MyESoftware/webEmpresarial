@@ -42,7 +42,7 @@ export default function Footer() {
 
           {/* Columna Especialidades */}
           <div>
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4">Especialidades</h4>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4">Nos especializamos en:</h4>
             <ul className="space-y-3 text-sm text-slate-400">
               <li className="flex items-center gap-2 italic">Desarrollo de Software</li>
               <li className="flex items-center gap-2 italic">Consultoria</li>

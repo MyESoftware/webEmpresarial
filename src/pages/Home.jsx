@@ -110,7 +110,7 @@ export default function Home() {
                 ¿Por qué React/Angular y no WordPress?
               </h3>
               <p className="text-slate-400 text-sm mt-4 leading-relaxed">
-                A diferencia de las plantillas lentas y vulnerables de WordPress u otro sistema de gestion de contenido, nosotros desarrollamos software con tecnologías de alto rendimiento, modernas e independientes.
+                A diferencia de las plantillas dependientes WordPress u otro sistema de gestion de contenido, nosotros desarrollamos software con tecnologías de alto rendimiento, modernas e independientes.
                 La pagina es solamente tuya, segura y escalable.
               </p>
               <div className="grid md:grid-cols-3 gap-6 mt-8">
@@ -126,7 +126,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-slate-600 text-[10px] mt-8 uppercase font-bold tracking-[0.2em]">
-                * Tu web es técnicamente superior, por eso Google te elige primero.
+                * Tu web es técnicamente superior.
               </p>
             </div>
           </div>

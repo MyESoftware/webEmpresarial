@@ -34,7 +34,7 @@ export default function Servicios() {
               </span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-400">
-                Reallizamos el sistema que necesites, a tu medida y a precios bajos.
+                Realizamos el sistema que necesites, a tu medida y a precios bajos.
             </p>
           </div>
         </div>
