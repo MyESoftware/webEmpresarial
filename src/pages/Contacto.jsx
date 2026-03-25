@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import SEO from "../components/SEO";
 import { SITE, waLink } from "../config/site";
-import { Mail, MapPin, Share2, MessageSquareText, Send } from "lucide-react";
+import { Mail, MapPin, Share2, MessageSquareText, Send, Video } from "lucide-react"; // Video es ideal para TikTok
 
 export default function Contacto() {
   const [nombre, setNombre] = useState("");
@@ -67,6 +67,9 @@ export default function Contacto() {
                 </div>
                 <div className="flex flex-wrap gap-4">
                   <a className="btn btn-outline text-xs px-5" href={SITE.social.instagram} target="_blank" rel="noreferrer">Instagram</a>
+                  <a className="btn btn-outline text-xs px-5 flex items-center gap-2" href="https://www.tiktok.com/@myesoftware" target="_blank" rel="noreferrer">
+                    <Video size={14} /> TikTok
+                  </a>
                 </div>
               </div>
             </div>
@@ -88,11 +91,11 @@ export default function Contacto() {
 
               <div className="space-y-3">
                 <label className="label" htmlFor="empresa">Nombre de tu Marca</label>
-                <input id="empresa" className="input" placeholder="Ej: Coca Cola" value={empresa} onChange={(e) => setEmpresa(e.target.value)} />
+                <input id="empresa" className="input" placeholder="Ej: Mi Empresa S.A." value={empresa} onChange={(e) => setEmpresa(e.target.value)} />
               </div>
 
               <div className="space-y-3">
-                <label className="label" htmlFor="servicio">¿Qué necesitas?</label>
+                <label className="label" htmlFor="servicio">¿Qué necesitás?</label>
                 <select id="servicio" className="input appearance-none cursor-pointer" value={servicio} onChange={(e) => setServicio(e.target.value)}>
                   <option>Landing page</option>
                   <option>Sitio Web a medida</option>
