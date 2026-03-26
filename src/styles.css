@@ -10,12 +10,12 @@
 @layer base {
   body { 
     @apply antialiased bg-[#050505] text-slate-100;
-    /* CAMBIO: Aclaramos solo el inicio del gradiente para dar luz, el resto igual */
-    background: radial-gradient(circle at 50% -20%, #1e293b 0%, #050505 100%);
+    /* Gradiente radial fijo para dar profundidad al fondo negro */
+    background: radial-gradient(circle at 50% -20%, #131313 0%, #050505 100%);
     background-attachment: fixed;
-    min-height: 100vh;
   }
   
+  /* Reset de enfoque global */
   a, button { 
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50; 
   }
@@ -24,14 +24,15 @@
 @layer components {
   .container-safe { @apply mx-auto w-full max-w-6xl px-4; }
 
-  /* BOTÓN PRIMARIO: Solo subimos un toque el brillo del glow */
+  /* BOTÓN PRIMARIO: Glow y respuesta táctil */
   .btn-primary { 
     @apply relative overflow-hidden inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-black uppercase tracking-wider transition-all duration-300;
-    @apply bg-emerald-500 text-slate-950 shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)];
+    @apply bg-emerald-500 text-slate-950 shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:shadow-[0_0_35px_rgba(16,185,129,0.5)];
     @apply active:scale-[0.97] active:bg-emerald-400;
     background-image: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
   }
 
+  /* BOTÓN OUTLINE: Brillo en el borde */
   .btn-outline { 
     @apply border border-white/10 bg-white/5 text-slate-100 px-6 py-3 rounded-xl font-bold transition-all duration-300;
     @apply hover:border-emerald-500/50 hover:bg-emerald-500/10;
@@ -42,16 +43,18 @@
     @apply bg-transparent text-slate-400 hover:bg-white/5 hover:text-white transition-all rounded-xl px-4 py-2; 
   }
 
-  /* CARDS: Mantenemos tu estructura, solo aclaramos el fondo de #0a0a0a a #111111 */
+  /* CARDS: Glassmorphism Pro */
   .card { 
-    @apply rounded-[2rem] border border-white/5 bg-[#111111]/90 shadow-2xl transition-all duration-500;
+    @apply rounded-[2rem] border border-white/5 bg-[#0a0a0a] shadow-2xl transition-all duration-500;
     @apply hover:border-emerald-500/30 shadow-emerald-500/5;
   }
 
+  /* BADGE: Efecto LED Neón */
   .badge { 
     @apply inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-emerald-400 shadow-[inset_0_0_10px_rgba(16,185,129,0.2)];
   }
 
+  /* FORM INPUTS */
   .input { 
     @apply w-full rounded-2xl border border-white/10 bg-black/60 px-5 py-4 text-sm text-white placeholder:text-slate-600 transition-all;
     @apply focus:outline-none focus:border-emerald-500/50 focus:ring-4 focus:ring-emerald-500/10;
@@ -59,24 +62,26 @@
 
   .label { @apply text-[10px] font-black uppercase tracking-[0.4em] text-emerald-500/70 mb-3 block ml-1; }
 
+  /* Animación de entrada de página */
   .main-content {
     animation: custom-fade-in 0.7s ease-out forwards;
   }
 }
 
-/* --- SISTEMA DE MENÚ MÓVIL --- (INTACTO) */
+/* --- SISTEMA DE MENÚ MÓVIL --- */
+
 .menu-mobile-overlay {
   position: fixed !important;
   inset: 0 !important;
-  background-color: #050505 !important;
-  z-index: 9999 !important;
+  background-color: #050505 !important; /* Negro absoluto para no traslucir */
+  z-index: 9999 !important; /* Capa máxima por encima de todo */
   display: flex;
   flex-direction: column;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-in-out;
 }
 
 .menu-hidden {
-  transform: translateX(100%);
+  transform: translateX(100%); /* Desliza desde la derecha */
   opacity: 0;
   pointer-events: none;
 }
@@ -87,13 +92,15 @@
   pointer-events: auto;
 }
 
+/* El botón de cerrar (X) dentro del menú */
 .menu-mobile-overlay button {
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
-  z-index: 10000;
+  z-index: 10000; /* Siempre por encima del fondo del menú */
 }
 
+/* Animaciones manuales */
 @keyframes custom-fade-in {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
