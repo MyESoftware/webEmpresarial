@@ -68,7 +68,7 @@ export default function Propuestas() {
   return (
     <main className="main-content">
       <SEO
-        title="Propuestas y Planes de Desarrollo | MyE Software"
+        title="Propuestas| MyE Software"
         description="Elegí el nivel de desarrollo que tu negocio necesita en Mendoza. Desde landings veloces hasta sistemas complejos a medida."
         path="/propuestas"
       />

@@ -8,7 +8,7 @@ export default function Contacto() {
   return (
     <main className="main-content">
       <SEO
-        title="Contacto y presupuesto"
+        title="Contacto "
         description="Pedí presupuesto para tu web, tienda online o sistema. Capturá leads con un flujo rápido y profesional."
         path="/contacto"
       />
