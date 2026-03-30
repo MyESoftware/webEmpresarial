@@ -29,7 +29,7 @@ export default function Servicios() {
             <span className="badge mb-6">Nuestra Oferta Técnica</span>
             <h1 className="text-5xl font-black tracking-tighter md:text-7xl text-white leading-[1.1]">
               Software de alta gama para <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 drop-shadow-[0_0_30px_rgba(52,211,153,0.3)]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 to-cyan-300 drop-shadow-[0_0_30px_rgba(52,211,153,0.3)]">
                 negocios reales.
               </span>
             </h1>
@@ -40,7 +40,7 @@ export default function Servicios() {
         </div>
         
         {/* Luz de fondo decorativa */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 blur-[120px] -z-10 rounded-full" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 blur-[120px] -z-10 rounded-full" />
       </section>
 
       {/* Planes de Precios - Envoltorio Limpio */}
@@ -56,9 +56,9 @@ export default function Servicios() {
       <Section kicker="Metodología" title="Cómo trabajamos">
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pasosProceso.map(({ id, t, d, icon }) => (
-            <div key={id} className="card group p-8 hover:border-emerald-500/30">
+            <div key={id} className="card group p-8 hover:border-fuchsia-500/30">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-2xl bg-emerald-500/10 text-emerald-500 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all duration-500 shadow-[inset_0_0_15px_rgba(16,185,129,0.1)]">
+                <div className="p-3 rounded-2xl bg-fuchsia-500/10 text-fuchsia-400 group-hover:bg-fuchsia-500 group-hover:text-slate-950 transition-all duration-500 shadow-[inset_0_0_15px_rgba(16,185,129,0.1)]">
                   {icon}
                 </div>
                 <div className="h-px flex-1 bg-white/5" />

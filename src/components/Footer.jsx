@@ -1,76 +1,71 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { SITE } from "../config/site";
-import { Terminal, Instagram, Linkedin, Github, MessageCircle } from "lucide-react";
-
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="border-t border-white/5 bg-slate-950 pt-16 pb-8">
+    <footer className="bg-transparent pb-20 pt-6 text-white md:pt-10">
       <div className="container-safe">
-        <div className="grid gap-12 md:grid-cols-4 lg:grid-cols-5">
-          
-          {/* Columna Branding */}
-          <div className="md:col-span-2 lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2 group">
-              <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                <Terminal size={20} />
+        <div className="footer-shell relative overflow-hidden rounded-[2.4rem] border border-white/10">
+          <div className="footer-backdrop absolute inset-0" />
+          <div className="footer-shell-glow absolute inset-0" />
+
+          <div className="relative z-10 p-4 md:p-6">
+            <div className="footer-image-frame">
+              <div className="relative h-24 overflow-hidden rounded-[1.7rem] md:h-36 xl:h-40">
+                <img
+                  src="/images/footer-mye-network.png"
+                  alt="Infraestructura digital MyE Software"
+                  className="h-full w-full object-cover object-center scale-[1.03]"
+                />
+                <div className="footer-image-overlay absolute inset-0" />
               </div>
-              <span className="text-xl font-black text-white tracking-tight">
-                {SITE.brand}
-              </span>
-            </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400 italic">
-              "{SITE.tagline || 'Transformando ideas en software escalable y de alto impacto.'}"
-            </p>
-            <div className="mt-6 flex gap-4 text-slate-500">
-               {/* Iconos de redes rápidos */}
-               <a href={SITE.social.instagram} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><Instagram size={20} /></a>
+            </div>
+
+            <div className="mt-8 grid gap-10 px-2 pb-3 pt-2 md:mt-10 md:grid-cols-[1.25fr_0.8fr_1fr_1fr] md:px-4">
+              <div>
+                <h3 className="text-[2.2rem] font-black tracking-[-0.04em] text-white md:text-[2.6rem]">
+                  MyE Software
+                </h3>
+                <p className="mt-4 max-w-md text-lg leading-relaxed text-slate-300">
+                  Páginas web y sistemas que convierten visitas en clientes.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-sm font-black uppercase tracking-[0.32em] text-slate-400">
+                  Navegación
+                </h4>
+                <ul className="mt-6 space-y-4 text-[1.15rem] font-medium text-slate-300">
+                  <li>Servicios</li>
+                  <li>Contacto</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-sm font-black uppercase tracking-[0.32em] text-slate-400">
+                  Qué resolvemos
+                </h4>
+                <ul className="mt-6 space-y-4 text-[1.15rem] font-medium text-slate-300">
+                  <li>Landing pages</li>
+                  <li>Sitios web comerciales</li>
+                  <li>Tiendas y catálogos</li>
+                  <li>Sistemas a medida</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-sm font-black uppercase tracking-[0.32em] text-slate-400">
+                  Contacto rápido
+                </h4>
+                <div className="mt-6 space-y-4 text-[1.15rem] font-medium text-slate-300">
+                  <p>Mendoza, Argentina</p>
+                  <p>softwaremye@gmail.com</p>
+                  <p className="font-black text-fuchsia-300">Soporte vía WhatsApp</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 border-t border-white/10 px-2 pb-2 pt-6 text-sm text-slate-400 md:px-4">
+              © {new Date().getFullYear()} MyE Software
             </div>
           </div>
-
-          {/* Columna Navegación */}
-          <div>
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4">Navegación</h4>
-            <ul className="space-y-3 text-sm font-medium text-slate-400">
-              <li><Link to="/servicios" className="hover:text-white transition-colors">Servicios</Link></li>
-              <li><Link to="/nosotros" className="hover:text-white transition-colors">Nosotros</Link></li>
-              <li><Link to="/contacto" className="hover:text-white transition-colors">Contacto</Link></li>
-            </ul>
-          </div>
-
-          {/* Columna Especialidades */}
-          <div>
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4">Nos especializamos en:</h4>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li className="flex items-center gap-2 italic">Desarrollo de Software</li>
-              <li className="flex items-center gap-2 italic">Consultoria</li>
-              <li className="flex items-center gap-2 italic">Optimización</li>
-              <li className="flex items-center gap-2 italic">Mantenimiento</li>
-            </ul>
-          </div>
-
-          {/* Columna Contacto Rápido */}
-          <div className="md:col-span-3 lg:col-span-1">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4">Ubicación</h4>
-            <p className="text-sm text-slate-400 mb-4">{SITE.location}</p>
-            <a 
-              href={SITE.social.whatsapp || "#"} 
-              className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline underline-offset-4"
-            >
-              <MessageCircle size={16} />
-              Soporte vía WhatsApp
-            </a>
-          </div>
-        </div>
-
-        {/* Barra inferior de Copyright */}
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">
-            © {year} {SITE.brand} 
-          </div>
-          
         </div>
       </div>
     </footer>

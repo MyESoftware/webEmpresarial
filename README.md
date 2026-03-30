@@ -1,65 +1,45 @@
-# 🚀 MyE Software Studio - Agencia Web Premium
+# ⚡ MyE Software | Digital Studio & Premium Development
 
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+![Mendoza](https://img.shields.io/badge/Location-Mendoza%2C%20Argentina-emerald)
 
-Una plataforma de agencia moderna y de alto rendimiento, diseñada específicamente para captar clientes que buscan **velocidad extrema**, **SEO local optimizado** y **diseño de alta gama**. 
+> **Transformamos visitas en oportunidades reales.** Construimos presencia digital con estética premium, estructura comercial y tecnología de alto rendimiento.
 
-Desarrollado con un enfoque en **conversión (CRO)**, este sitio reemplaza las lentas plantillas de WordPress por una arquitectura robusta en **React + Vite**.
+En **MyE Software** dejamos atrás las plantillas genéricas de WordPress para ofrecer una arquitectura robusta basada en **React + Vite**, diseñada para negocios que buscan autoridad visual y conversión directa.
 
 ---
 
-## ✨ Características Principales
+## 💎 Nuestra Propuesta de Valor
 
-- 🌑 **Premium Dark Mode:** Estética minimalista con acentos en verde esmeralda (Emerald-500).
-- ⚡ **Performance Ultra:** Carga instantánea gracias a Vite y optimización de assets.
-- 📱 **Mobile First:** Menú hamburguesa personalizado con fondo sólido e impenetrable.
-- 🔍 **SEO Estratégico:** Manejo dinámico de metadatos con `react-helmet-async` para indexación en Google.
-- 💬 **WhatsApp Budget Builder:** Formulario inteligente que genera mensajes personalizados para WhatsApp Business.
-- 🚀 **Deploy Ready:** Configuración optimizada para Vercel.
+* **Diseño de Autoridad:** Estética *High-End* que eleva el valor percibido de tu marca.
+* **Velocidad Extrema:** Optimización total de assets para carga instantánea.
+* **Estructura de Conversión (CRO):** Embudos de venta integrados y formularios inteligentes.
+* **WhatsApp Cloud Integration:** Sistema de captación de leads que conecta directamente con tu equipo comercial.
+* **SEO Local Estratégico:** Indexación optimizada para dominar los resultados de búsqueda.
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-| Herramienta | Uso |
+| Componente | Tecnología |
 | :--- | :--- |
-| **React 18** | Biblioteca base para la UI. |
-| **Vite** | Tooling de nueva generación para un desarrollo rápido. |
-| **Tailwind CSS** | Estilos atómicos y diseño responsivo profesional. |
-| **React Router 6** | Navegación fluida entre secciones (SPA). |
-| **Lucide React** | Set de iconos minimalistas y consistentes. |
+| **Frontend** | React 18 + Vite |
+| **Estilos** | Tailwind CSS (Design System personalizado) |
+| **Navegación** | React Router 6 (SPA con Scroll Suave) |
+| **Iconografía** | Lucide React |
+| **Deployment** | Vercel (Edge Network) |
+| **Backend / Bot** | Node.js + Express (Hosteado en Render) |
 
 ---
 
-## ⚙️ Configuración Rápida
+## ⚙️ Estructura del Proyecto
 
-Para personalizar la agencia con tus datos, solo debes editar un archivo:
+El ecosistema de MyE Software se divide en dos capas principales para garantizar escalabilidad:
 
-1. Edita el archivo `src/config/site.js`:
-   - Cambia el número de **WhatsApp** (formato internacional sin el +).
-   - Actualiza tus redes sociales (Instagram, LinkedIn).
-   - Configura el nombre de tu marca y email.
-
-2. Actualiza tus proyectos en `src/pages/Portfolio.jsx` para mostrar tus propios casos de éxito.
+1.  **Web Empresarial (Frontend):** Landing page de alto impacto optimizada para el cliente final.
+2.  **Lead Management Bot (Backend):** Servicio independiente que procesa los formularios y automatiza el contacto vía WhatsApp.
 
 ---
 
-## 🚀 Instalación y Desarrollo
-
-Sigue estos pasos para tener el entorno de desarrollo listo:
-
-```bash
-# 1. Clonar el repositorio
-git clone [https://github.com/MyESoftware/webEmpresarial.git](https://github.com/MyESoftware/webEmpresarial.git)
-
-# 2. Entrar a la carpeta
-cd webEmpresarial
-
-# 3. Instalar dependencias
-npm install
-
-# 4. Iniciar el servidor de desarrollo
-npm run dev

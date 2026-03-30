@@ -43,7 +43,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mb-16">
           <span className="badge mb-4">Casos de Éxito</span>
           <h1 className="text-5xl font-black tracking-tighter md:text-7xl text-white leading-none">
-            Soluciones que hablan por <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">nosotros.</span>
+            Soluciones que hablan por <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 to-cyan-300">nosotros.</span>
           </h1>
           <p className="mt-8 text-lg text-slate-400 leading-relaxed">
             Desde aplicaciones empresariales robustas en Java hasta sitios web ultra veloces. 
@@ -53,10 +53,10 @@ export default function Portfolio() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {proyectos.map((p, i) => (
-            <div key={i} className="card group overflow-hidden border-white/5 hover:border-emerald-500/30 transition-all duration-500">
+            <div key={i} className="card group overflow-hidden border-white/5 hover:border-fuchsia-500/30 transition-all duration-500">
               <div className="aspect-video bg-gradient-to-br from-slate-900 to-black flex items-center justify-center p-6 border-b border-white/5">
                  <div className="text-center group-hover:scale-105 transition-transform duration-500">
-                    <Code2 className="mx-auto mb-4 text-emerald-500/40" size={48} />
+                    <Code2 className="mx-auto mb-4 text-fuchsia-400/40" size={48} />
                     <span className="text-[10px] font-black text-slate-600 uppercase tracking-[0.3em]">{p.stack.join(" • ")}</span>
                  </div>
               </div>
@@ -64,11 +64,11 @@ export default function Portfolio() {
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">{p.tag}</span>
+                    <span className="text-[10px] font-black text-fuchsia-400 uppercase tracking-widest">{p.tag}</span>
                     <h3 className="text-2xl font-black text-white mt-1 tracking-tighter">{p.title}</h3>
                   </div>
                   {p.isLive && (
-                    <div className="p-2 rounded-xl bg-white/5 text-slate-400 group-hover:text-emerald-500 transition-colors">
+                    <div className="p-2 rounded-xl bg-white/5 text-slate-400 group-hover:text-fuchsia-400 transition-colors">
                       <ExternalLink size={20} />
                     </div>
                   )}
@@ -78,10 +78,10 @@ export default function Portfolio() {
                   {p.description}
                 </p>
 
-                <div className="flex items-center gap-3 py-3 px-4 bg-emerald-500/5 border border-emerald-500/10 rounded-xl">
-                  <Rocket size={18} className="text-emerald-500" />
+                <div className="flex items-center gap-3 py-3 px-4 bg-fuchsia-500/5 border border-emerald-500/10 rounded-xl">
+                  <Rocket size={18} className="text-fuchsia-400" />
                   <span className="text-xs font-bold text-slate-200 uppercase tracking-tighter">
-                    <span className="text-emerald-500">Resultado:</span> {p.result}
+                    <span className="text-fuchsia-400">Resultado:</span> {p.result}
                   </span>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function Portfolio() {
               Empezar ahora
             </a>
           </div>
-          <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/5 rounded-full blur-[100px] -mr-40 -mt-40" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-fuchsia-500/5 rounded-full blur-[100px] -mr-40 -mt-40" />
         </div>
       </section>
     </main>

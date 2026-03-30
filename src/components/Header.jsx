@@ -28,12 +28,12 @@ export default function Header() {
           
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-xl bg-emerald-500 text-slate-950">
+            <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-400 text-white">
               <Terminal size={22} strokeWidth={3} />
             </div>
             <div className="flex flex-col text-left leading-none">
               <span className="text-lg font-black tracking-tighter text-white uppercase">{SITE.brand}</span>
-              <span className="text-[9px] font-black text-emerald-500 uppercase tracking-[0.2em] mt-1">Software Studio</span>
+              <span className="text-[9px] font-black text-fuchsia-400 uppercase tracking-[0.2em] mt-1">Software Studio</span>
             </div>
           </NavLink>
 
@@ -41,7 +41,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-1 bg-white/5 p-1 rounded-2xl border border-white/5">
             {navLinks.map(([label, to]) => (
               <NavLink key={to} to={to} end={to === "/"}
-                className={({ isActive }) => `rounded-lg px-4 py-2 text-sm font-bold transition-all ${isActive ? "bg-emerald-500 text-slate-950" : "text-slate-400 hover:text-white"}`}
+                className={({ isActive }) => `rounded-lg px-4 py-2 text-sm font-bold transition-all ${isActive ? "bg-gradient-to-r from-fuchsia-500 to-cyan-400 text-white" : "text-slate-400 hover:text-white"}`}
               >
                 {label}
               </NavLink>
@@ -64,20 +64,20 @@ export default function Header() {
         {/* BOTÓN CERRAR INTERNO */}
         <button 
           onClick={() => setIsOpen(false)} 
-          className="absolute top-5 right-5 p-4 text-emerald-500 z-[1001]"
+          className="absolute top-5 right-5 p-4 text-fuchsia-400 z-[1001]"
         >
           <X size={40} strokeWidth={3} />
         </button>
 
         <nav className="flex flex-col h-full pt-32 px-10 gap-8 overflow-y-auto">
-          <div className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-500/40">Navegación</div>
+          <div className="text-[10px] font-black uppercase tracking-[0.5em] text-fuchsia-400/40">Navegación</div>
           
           <div className="flex flex-col gap-6 text-left">
             {navLinks.map(([label, to]) => (
               <NavLink 
                 key={to} 
                 to={to} 
-                className={({ isActive }) => `text-5xl font-black tracking-tighter ${isActive ? "text-emerald-500" : "text-white"}`}
+                className={({ isActive }) => `text-5xl font-black tracking-tighter ${isActive ? "text-fuchsia-400" : "text-white"}`}
               >
                 {label}
               </NavLink>
@@ -93,7 +93,6 @@ export default function Header() {
             
             <div className="flex justify-center gap-10 text-slate-500 pb-10">
                <a href={SITE.social.instagram} target="_blank" rel="noreferrer"><Instagram size={28} /></a>
-               <a href={SITE.social.linkedin} target="_blank" rel="noreferrer"><Linkedin size={28} /></a>
             </div>
           </div>
         </nav>

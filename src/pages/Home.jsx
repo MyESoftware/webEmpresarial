@@ -2,136 +2,112 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import Pricing from "../components/Pricing";
+import PortfolioGrid from "../components/PortfolioGrid";
+import LeadCaptureWizard from "../components/LeadCaptureWizard";
+import { FunnelSection, PremiumCTA, TrustStrip } from "../components/ConversionSections";
 import { waLink, SITE } from "../config/site";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ShieldCheck, Star, Sparkles } from "lucide-react";
 
 export default function Home() {
   return (
     <main className="main-content">
       <SEO
-        title="MyE Software | Home "
-        description="¿Buscás crear tu sitio web o un sistema para tu negocio? En MyE lo hacemos realidad. ¡Asesoramiento hoy!"
+        title="Webs premium que venden"
+        description="Creamos páginas web, tiendas online y sistemas que hacen ver mejor a tu negocio y convierten visitas en clientes."
         path="/"
       />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-white/5">
-        {/* Glow de fondo dinámico */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
-          <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-emerald-500/10 blur-[120px] rounded-full" />
-        </div>
-
-        <div className="container-safe py-16 md:py-28">
-          <div className="grid items-center gap-16 md:grid-cols-2">
-            <div>
-              <div className="badge mb-6">
-                Soluciones Digitales en Mendoza
-              </div>
-              <h1 className="text-5xl font-black tracking-tighter md:text-7xl text-white leading-[1.1]">
-                Potencia tu negocio <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 drop-shadow-[0_0_30px_rgba(52,211,153,0.3)]">
-                   hoy.
-                </span>
-              </h1>
-              <p className="mt-8 text-lg leading-relaxed text-slate-400 max-w-lg">
-                ¿Necesitás una página para vender o un sistema para organizar tu local? 
-                En <strong>{SITE.brand}</strong> creamos software que escala y que Google ama.
-              </p>
-
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a className="btn btn-primary px-8" href={waLink()} target="_blank" rel="noreferrer">
-                  Presupuesto gratis <ArrowRight size={20} />
-                </a>
-              </div>
-
-              <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4">
-                {["Aparecé en Google", "Fácil de usar", "Soporte 1-a-1"].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-500">
-                    <CheckCircle2 size={18} className="text-emerald-500" /> {item}
-                  </div>
-                ))}
-              </div>
+      <section className="py-8 pt-28 md:py-10 md:pt-32">
+        <div className="container-safe">
+          <div className="hero-card relative overflow-hidden rounded-[2.4rem] border border-white/10 min-h-[620px] md:min-h-[720px]">
+            <div className="absolute inset-0">
+              <img
+                src="/images/hero-mye-tech.png"
+                alt="MyE Software tecnología"
+                className="h-full w-full object-cover object-center"
+              />
             </div>
+            <div className="hero-card-overlay absolute inset-0" />
+            <div className="hero-card-glow absolute inset-0" />
 
-            {/* Card de Proceso */}
-            <div className="card p-8 md:p-10 relative">
-              <h2 className="text-2xl font-black text-white mb-8 tracking-tighter">¿Cómo trabajamos?</h2>
-              <div className="space-y-4">
-                {[
-                  ["Charla inicial", "Definimos objetivos claros para tu negocio."],
-                  ["Plan a medida", "Elegimos la tecnología ideal."],
-                  ["Desarrollo", "Construimos tu sitio con código limpio y rápido."],
-                  ["Lanzamiento", "Tu negocio online funcionando al 100%."],
-                ].map(([t, d], i) => (
-                  <div key={t} className="flex gap-5 p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-all group">
-                    <div className="text-emerald-500 font-black text-2xl opacity-30 group-hover:opacity-100 transition-opacity">0{i + 1}</div>
-                    <div>
-                      <div className="text-sm font-black text-white uppercase tracking-wider">{t}</div>
-                      <div className="text-sm text-slate-500 mt-1">{d}</div>
+            <div className="relative z-10 flex min-h-[620px] md:min-h-[720px] items-center p-6 md:p-10 lg:p-14 xl:p-16">
+              <div className="hero-copy max-w-4xl">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="badge">Estudio digital tecnológico</span>
+                  <span className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-slate-300 backdrop-blur-sm">
+                    Mendoza · Argentina
+                  </span>
+                </div>
+
+                <h1 className="mt-7 max-w-4xl text-5xl font-black tracking-[-0.05em] text-white md:text-7xl xl:text-[5.4rem] xl:leading-[0.92]">
+                  Construimos una presencia digital
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-fuchsia-200">
+                    que hace que tu negocio
+                  </span>
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-cyan-200">
+                    se vea premium, tecnológico y listo para vender.
+                  </span>
+                </h1>
+
+                <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-200 md:text-[1.16rem]">
+                  En <strong>{SITE.brand}</strong> combinamos diseño de alto impacto, estructura comercial, velocidad y automatización para que tu web inspire confianza, ordene consultas y convierta visitas en oportunidades reales.
+                </p>
+
+                <div className="mt-10 flex flex-wrap gap-4">
+                  <a
+                    className="btn btn-primary px-8"
+                    href={waLink("Hola! Quiero una web premium para vender más. ¿Vemos mi proyecto?")}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Pedir propuesta <ArrowRight size={20} />
+                  </a>
+                </div>
+
+                <div className="mt-12 grid gap-4 sm:grid-cols-3">
+                  {[
+                    [ShieldCheck, "Diseño de autoridad", "Una estética que hace que tu marca parezca más seria y valiosa."],
+                    [Star, "Experiencia premium", "Jerarquía visual, contraste y claridad para vender mejor."]
+                  ].map(([Icon, title, desc]) => (
+                    <div key={title} className="rounded-[1.6rem] border border-white/10 bg-black/25 p-5 backdrop-blur-md shadow-[0_12px_40px_rgba(0,0,0,0.18)]">
+                      <Icon size={20} className="text-fuchsia-300" />
+                      <div className="mt-4 text-sm font-black uppercase tracking-[0.15em] text-white">{title}</div>
+                      <p className="mt-2 text-sm leading-relaxed text-slate-300">{desc}</p>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sección de Servicios */}
-      <section className="py-24 bg-[#080808]">
+      <TrustStrip />
+
+      <section className="py-24">
         <div className="container-safe">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl font-black md:text-6xl text-white tracking-tighter italic">¿Qué estás buscando?</h2>
-            <p className="mt-4 text-slate-400 text-lg">Elegí el plan que mejor se adapte al tamaño de tu proyecto.</p>
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <span className="badge">Oferta comercial</span>
+            <h2 className="mt-5 text-4xl font-black tracking-tight text-white md:text-6xl">Servicios diseñados para vender, no solo para “estar en internet”.</h2>
+            <p className="mt-4 text-lg leading-relaxed text-slate-400">
+              Reordenamos tu presencia digital para que la propuesta se entienda rápido, el diseño transmita valor y el visitante tenga un siguiente paso claro.
+            </p>
           </div>
           <Pricing />
         </div>
       </section>
 
-      {/* FAQ Sección Técnica */}
-      <section className="py-24 border-t border-white/5">
-        <div className="container-safe max-w-4xl">
-          <h2 className="text-3xl font-black text-white text-center mb-16 tracking-tighter">Preguntas frecuentes</h2>
-          <div className="grid gap-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="card p-6">
-                <h3 className="font-bold text-white uppercase text-xs tracking-widest text-emerald-500 mb-3">Tiempos</h3>
-                <p className="text-slate-300 text-sm leading-relaxed">Una landing simple puede estar lista en 7 días. Sistemas complejos dependen de los requerimientos técnicos.</p>
-              </div>
-              <div className="card p-6">
-                <h3 className="font-bold text-white uppercase text-xs tracking-widest text-emerald-500 mb-3">SEO</h3>
-                <p className="text-slate-300 text-sm leading-relaxed">Configuramos la arquitectura del sitio para que Google te indexe correctamente desde el primer día.</p>
-              </div>
-            </div>
 
-            {/* El diferencial técnico */}
-            <div className="card p-8 border-emerald-500/20 bg-emerald-500/[0.02]">
-              <h3 className="text-2xl font-black text-white flex items-center gap-3 tracking-tighter">
-                ¿Por qué React/Angular y no WordPress?
-              </h3>
-              <p className="text-slate-400 text-sm mt-4 leading-relaxed">
-                A diferencia de las plantillas dependientes WordPress u otro sistema de gestion de contenido, nosotros desarrollamos software con tecnologías de alto rendimiento, modernas e independientes.
-                La pagina es solamente tuya, segura y escalable.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
-                {[
-                  ["Velocidad extrema", "Google premia los sitios rápidos."],
-                  ["Seguridad Total", "Sin plugins de terceros vulnerables."],
-                  ["Escalabilidad", "Tu sitio puede crecer sin límites."],
-                ].map(([t, d]) => (
-                  <div key={t}>
-                    <div className="text-emerald-500 font-bold text-sm mb-1 uppercase tracking-tighter">{t}</div>
-                    <div className="text-xs text-slate-500 leading-relaxed">{d}</div>
-                  </div>
-                ))}
-              </div>
-              <p className="text-slate-600 text-[10px] mt-8 uppercase font-bold tracking-[0.2em]">
-                * Tu web es técnicamente superior.
-              </p>
-            </div>
-          </div>
+      <section className="py-24">
+        <div className="container-safe">
+          <LeadCaptureWizard />
         </div>
       </section>
+
+      <FunnelSection />
+      <PremiumCTA />
+
+     
     </main>
   );
 }

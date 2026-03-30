@@ -9,14 +9,14 @@ const propuestas = [
     name: "Landing Page Express",
     price: "$180.000",
     oldPrice: "$250.000",
-    details: ["Hasta 3 secciones", "Botón a chat de WhatsApp Business", "Carga ultra veloz (React)", "Vidriera virtual de alta conversión"],
+    details: ["Hasta 3 secciones", "Botón a chat de WhatsApp Business", "Carga ultra veloz", "Vidriera virtual de alta conversión"],
   },
   {
     level: "Nivel 02",
     name: "Web Corporativa + Catálogo",
     price: "$290.000",
     oldPrice: "$375.000",
-    details: ["Hasta 5 secciones independientes", "Catálogo estático (sin carrito)", "Formulario de contacto profesional", "Optimización SEO base"],
+    details: ["Hasta 5 secciones independientes", "Catálogo estático (sin carrito)", "Formulario de contacto profesional", "Optimización SEO "],
   },
   {
     level: "Nivel 03",
@@ -77,13 +77,13 @@ export default function Propuestas() {
         <div className="container-safe relative z-10 text-center">
           <span className="badge mb-6">Ingeniería de Software Mendocina</span>
           <h1 className="text-5xl font-black tracking-tighter md:text-7xl text-white leading-[1.1] max-w-4xl mx-auto">
-            Propuestas de Software <span className="text-emerald-500">Transparentes.</span>
+            Propuestas de Software <span className="text-fuchsia-400">Transparentes.</span>
           </h1>
           <p className="mt-8 text-lg text-slate-400 max-w-2xl mx-auto">
             Elegí el plan que mejor se adapte a la etapa actual de tu empresa. Sin costos ocultos y con tecnología de alto rendimiento.
           </p>
         </div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 blur-[120px] -z-10 rounded-full" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 blur-[120px] -z-10 rounded-full" />
       </section>
 
       <section className="py-16 md:py-24">
@@ -91,9 +91,9 @@ export default function Propuestas() {
           {/* Grid de Propuestas */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {propuestas.map((plan) => (
-              <article key={plan.level} className="card group p-8 transition-all hover:border-emerald-500/30 flex flex-col relative overflow-hidden">
+              <article key={plan.level} className="card group p-8 transition-all hover:border-fuchsia-500/30 flex flex-col relative overflow-hidden">
                 {plan.oldPrice && (
-                    <div className="absolute top-0 right-0 bg-emerald-500/10 text-emerald-400 font-black text-[9px] uppercase tracking-[0.2em] px-5 py-2 rounded-bl-xl border-l border-b border-emerald-500/20 flex items-center gap-1.5">
+                    <div className="absolute top-0 right-0 bg-fuchsia-500/10 text-fuchsia-300 font-black text-[9px] uppercase tracking-[0.2em] px-5 py-2 rounded-bl-xl border-l border-b border-fuchsia-500/20 flex items-center gap-1.5">
                         <Zap size={12}/> Descuento Lanzamiento
                     </div>
                 )}
@@ -103,7 +103,7 @@ export default function Propuestas() {
                     <h2 className="mt-5 text-2xl font-black tracking-tighter text-white uppercase">{plan.name}</h2>
                     
                     <div className="mt-4 flex items-baseline gap-3">
-                        <p className="text-4xl font-black text-emerald-500 tracking-tighter">{plan.price}</p>
+                        <p className="text-4xl font-black text-fuchsia-400 tracking-tighter">{plan.price}</p>
                         {plan.oldPrice && (
                             <p className="text-sm font-medium text-slate-600 line-through tracking-tight">{plan.oldPrice}</p>
                         )}
@@ -112,14 +112,14 @@ export default function Propuestas() {
                     <ul className="mt-8 space-y-4 text-slate-300">
                       {plan.details.map((item) => (
                         <li key={item} className="flex items-start gap-3.5 text-sm">
-                          <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-500 mt-0.5" />
+                          <CheckCircle2 className="h-5 w-5 shrink-0 text-fuchsia-400 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
                 </div>
                 
-                <a className="btn btn-outline w-full mt-10 py-4 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors" href={waLink(`Hola! Me interesa la propuesta ${plan.name} (${plan.level})`)} target="_blank" rel="noreferrer">
+                <a className="btn btn-outline w-full mt-10 py-4 group-hover:bg-fuchsia-500 group-hover:text-slate-950 transition-colors" href={waLink(`Hola! Me interesa la propuesta ${plan.name} (${plan.level})`)} target="_blank" rel="noreferrer">
                     Consultar por este plan
                 </a>
               </article>
@@ -127,7 +127,7 @@ export default function Propuestas() {
           </div>
 
           {/* Condiciones de Servicio */}
-          <div className="card p-10 bg-emerald-500/[0.02] border-emerald-500/20 relative overflow-hidden">
+          <div className="card p-10 bg-fuchsia-500/[0.04] border-fuchsia-500/20 relative overflow-hidden">
             <h3 className="text-3xl font-black tracking-tighter text-white">Condiciones Técnicas y de Pago</h3>
             <div className="grid md:grid-cols-3 gap-8 mt-10 text-sm">
                 {[
@@ -136,7 +136,7 @@ export default function Propuestas() {
                     ["Gastos Externos", "Los costos de Dominio (.com / .com.ar) y Hosting corren por cuenta del cliente (brindamos asesoramiento técnico gratuito)."]
                 ].map(([title, desc]) => (
                     <div key={title} className="bg-white/[0.03] p-6 rounded-2xl border border-white/5">
-                        <span className="font-black text-white uppercase text-xs tracking-widest text-emerald-500">{title}</span>
+                        <span className="font-black text-white uppercase text-xs tracking-widest text-fuchsia-400">{title}</span>
                         <p className="mt-3 text-slate-300 leading-relaxed">{desc}</p>
                     </div>
                 ))}

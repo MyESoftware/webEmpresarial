@@ -7,17 +7,17 @@ const valores = [
   {
     t: "Enfoque en negocio",
     d: "No diseñamos 'páginas lindas', creamos herramientas de ventas.",
-    icon: <Rocket className="text-emerald-500" size={24} />
+    icon: <Rocket className="text-fuchsia-400" size={24} />
   },
   {
     t: "Velocidad + SEO",
     d: "Webs optimizadas para Google y usuarios impacientes. Velocidad de carga extrema garantizada.",
-    icon: <CheckCircle2 className="text-emerald-500" size={24} />
+    icon: <CheckCircle2 className="text-fuchsia-400" size={24} />
   },
   {
     t: "ADN Programador",
     d: "Dominamos el stack técnico profesional (Java, React, SQL). Nada de plantillas limitadas, dependientes o inseguras.Permitiendole a tu pagina crecer sin limites",
-    icon: <Terminal className="text-emerald-500" size={24} />
+    icon: <Terminal className="text-fuchsia-400" size={24} />
   }
 ];
 
@@ -37,7 +37,7 @@ export default function Nosotros() {
           </span>
           <h1 className="text-5xl font-black tracking-tighter md:text-7xl text-white leading-none">
             Pasión por el código, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">foco en resultados.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 to-cyan-300">foco en resultados.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-400">
             En {SITE.brand} trabajamos con un enfoque pragmático: entendemos tu modelo de negocio y construimos la infraestructura digital que necesitás para escalar sin límites técnicos.
@@ -46,7 +46,7 @@ export default function Nosotros() {
 
         <div className="mt-20 grid gap-6 md:grid-cols-3">
           {valores.map(({ t, d, icon }) => (
-            <div key={t} className="card p-10 hover:border-emerald-500/30 transition-all group">
+            <div key={t} className="card p-10 hover:border-fuchsia-500/30 transition-all group">
               <div className="mb-6 p-4 rounded-2xl bg-white/[0.03] w-fit group-hover:scale-110 transition-transform shadow-[inset_0_0_15px_rgba(255,255,255,0.05)]">
                 {icon}
               </div>
@@ -70,7 +70,7 @@ export default function Nosotros() {
                 "Asesoramiento técnico honesto y transparente"
               ].map((item) => (
                 <li key={item} className="flex items-center gap-4 text-sm font-bold text-slate-300 uppercase tracking-tight">
-                  <div className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
+                  <div className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_12px_rgba(168,85,247,0.55)]" />
                   {item}
                 </li>
               ))}
@@ -80,10 +80,10 @@ export default function Nosotros() {
             <div className="aspect-square bg-gradient-to-br from-emerald-500/10 to-transparent rounded-[3rem] border border-white/5 flex items-center justify-center p-12 overflow-hidden shadow-2xl">
               <div className="text-center group-hover:scale-110 transition-transform duration-700">
                   <div className="text-8xl mb-6">🚀</div>
-                  <div className="text-[10px] font-black text-emerald-500/60 uppercase tracking-[0.5em]">Building for the future</div>
+                  <div className="text-[10px] font-black text-fuchsia-400/60 uppercase tracking-[0.5em]">Building for the future</div>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-[#0a0a0a] p-6 rounded-2xl border border-white/10 shadow-2xl hidden md:block">
-                 <pre className="text-xs text-emerald-500/70 font-mono italic">
+                 <pre className="text-xs text-fuchsia-400/70 font-mono italic">
                    {`while(business.growing) {
   optimize(ux);
   scale(backend);
