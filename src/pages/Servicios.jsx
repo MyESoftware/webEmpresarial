@@ -17,7 +17,7 @@ export default function Servicios() {
   return (
     <main className="main-content">
       <SEO 
-        title="Servicios | MyE" 
+        title="Servicios" 
         description="Landing pages, sitios web y sistemas a medida. Calidad técnica desde Mendoza." 
         path="/servicios" 
       />

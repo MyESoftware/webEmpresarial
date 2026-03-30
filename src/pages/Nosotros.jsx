@@ -25,7 +25,7 @@ export default function Nosotros() {
   return (
     <main className="main-content">
       <SEO 
-        title="Quiénes somos | MyE" 
+        title="Quiénes somos" 
         description="Especialistas en desarrollo web escalable y soluciones a medida en Mendoza." 
         path="/nosotros" 
       />
