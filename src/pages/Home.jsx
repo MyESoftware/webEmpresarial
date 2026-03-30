@@ -22,7 +22,7 @@ export default function Home() {
           <div className="hero-card relative overflow-hidden rounded-[2.4rem] border border-white/10 min-h-[620px] md:min-h-[720px]">
             <div className="absolute inset-0">
               <img
-                src="/images/hero-mye-tech.png"
+                src="/images/hero-mye-tech.jpg"
                 alt="MyE Software tecnología"
                 className="h-full w-full object-cover object-center"
               />

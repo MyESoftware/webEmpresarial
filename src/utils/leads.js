@@ -7,31 +7,31 @@ export function calculateEstimate({ projectType, pages, features = [], timeline 
   let max = 0;
 
   const base = {
-    "Landing page": [180000, 320000],
-    "Sitio web corporativo": [350000, 650000],
-    "Tienda online": [650000, 1200000],
-    "Sistema a medida": [1200000, 2800000],
+    "Landing page": [160000, 300000],
+    "Sitio web corporativo": [275000, 450000],
+    "Tienda online": [450000, 900000],
+    "Sistema a medida": [900000, 1500000],
   };
 
   [min, max] = base[projectType] || [250000, 500000];
 
   const pagesExtra = {
     "1 a 3 secciones": [0, 0],
-    "4 a 7 secciones": [90000, 180000],
-    "8+ secciones": [180000, 420000],
+    "4 a 7 secciones": [95000, 160000],
+    "8+ secciones": [160000, 380000],
   };
 
   const [pagesMin, pagesMax] = pagesExtra[pages] || [0, 0];
   min += pagesMin;
   max += pagesMax;
 
-  const featureValue = features.length * 95000;
+  const featureValue = features.length * 85000;
   min += featureValue;
   max += featureValue * 1.6;
 
   if (timeline === "Urgente (7 a 15 días)") {
-    min += 120000;
-    max += 220000;
+    min += 100000;
+    max += 200000;
   }
 
   const format = new Intl.NumberFormat("es-AR");

@@ -7,7 +7,7 @@ const plans = [
   {
     name: "Landing premium",
     subtitle: "Ideal para captar consultas rápido",
-    price: "Desde ARS 180k",
+    price: "Desde ARS 160k",
     items: [
       "3 secciones de información",
       "Boton directo a WhatsApp",
@@ -19,7 +19,7 @@ const plans = [
   {
     name: "Sitio web comercial",
     subtitle: "Para negocios que quieren verse grandes y vender mejor",
-    price: "Desde ARS 350k",
+    price: "Desde ARS 275k",
     items: [
       "Arquitectura personalizada",
       "Secciones estratégicas",

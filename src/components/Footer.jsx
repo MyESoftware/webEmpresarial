@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="footer-image-frame">
               <div className="relative h-24 overflow-hidden rounded-[1.7rem] md:h-36 xl:h-40">
                 <img
-                  src="/images/footer-mye-network.png"
+                  src="/images/footer-mye-network.jpg"
                   alt="Infraestructura digital MyE Software"
                   className="h-full w-full object-cover object-center scale-[1.03]"
                 />
