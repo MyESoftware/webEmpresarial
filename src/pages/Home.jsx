@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="main-content">
       <SEO
-        title="Diseño en Mendoza | MyE Software"
+        title="Pagina Web a Tu Medida"
         description="Creamos páginas web, tiendas online y sistemas que hacen ver mejor a tu negocio y convierten visitas en clientes."
         path="/"
       />
