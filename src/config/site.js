@@ -24,13 +24,13 @@ export const SITE = {
 };
 
 export function waLink(
-  message = "¡Hola! Vi su web y quiero consultar para tener mi propia página o sistema. ¿Me asesoran?"
+  message = "¡Hola! Me Gustaria Hacer una Consulta"
 ) {
   return `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
 export function buildBudgetMessage(payload = {}) {
-  const lines = ["¡Hola! Quiero pedir un presupuesto para mi proyecto digital."];
+  const lines = ["¡Hola! Me Gustaria Hacer una Consulta"];
   if (payload.name) lines.push(`👤 Nombre: ${payload.name}`);
   if (payload.business) lines.push(`🏢 Negocio: ${payload.business}`);
   if (payload.phone) lines.push(`📱 Teléfono: ${payload.phone}`);

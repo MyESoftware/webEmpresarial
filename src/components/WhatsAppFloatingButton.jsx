@@ -5,7 +5,7 @@ import { WhatsAppIcon } from "./icons";
 export default function WhatsAppFloatingButton() {
   return (
     <a
-      href={waLink("Hola! Quiero un presupuesto. ¿Podemos hablar?")}
+      href={waLink("Hola! Me Gustaria Hacer una Consulta")}
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-400 text-white shadow-soft transition hover:scale-[1.03] active:scale-[0.98]"
