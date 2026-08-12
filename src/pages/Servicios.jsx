@@ -2,23 +2,22 @@ import React from "react";
 import SEO from "../components/SEO";
 import Pricing from "../components/Pricing";
 import Section from "../components/Section";
-import { waLink } from "../config/site";
-import { Cpu, Layout, Zap, Search, Settings, ArrowRight } from "lucide-react"; 
+import { Layout, Zap, Search, Settings, Code2 } from "lucide-react"; 
 
 const pasosProceso = [
-  { id: 1, t: "Brief (15 min)", d: "Definimos objetivo, público, oferta y material base.", icon: <Layout size={20} /> },
-  { id: 2, t: "Propuesta", d: "Estructura lógica, copy persuasivo y diseño base.", icon: <Zap size={20} /> },
-  { id: 3, t: "Construcción", d: "Desarrollo robusto con optimización de carga y performance.", icon: <Cpu size={20} /> },
-  { id: 4, t: "Publicación", d: "Deploy, configuración de dominio y checklist.", icon: <Search size={20} /> },
-  { id: 5, t: "Mantenimiento", d: "Soporte preventivo, actualizaciones y mejoras constantes.", icon: <Settings size={20} /> },
+  { id: 1, t: "Descubrimiento", d: "Auditoría de necesidades, definición de objetivos B2B y requerimientos técnicos.", icon: <Search size={20} /> },
+  { id: 2, t: "Arquitectura", d: "Diseño de sistemas escalables, elección del stack y planificación de infraestructura.", icon: <Layout size={20} /> },
+  { id: 3, t: "Desarrollo", d: "Ingeniería de software robusta, código limpio y pruebas de rendimiento continuas.", icon: <Code2 size={20} /> },
+  { id: 4, t: "Entrega", d: "Despliegue seguro en producción, configuración de CI/CD y checklist de QA.", icon: <Zap size={20} /> },
+  { id: 5, t: "Evolución", d: "Monitoreo constante, soporte técnico preventivo y escalabilidad a demanda.", icon: <Settings size={20} /> },
 ];
 
 export default function Servicios() {
   return (
     <main className="main-content">
       <SEO 
-        title="Servicios" 
-        description="Landing pages, sitios web y sistemas a medida. Calidad técnica desde Mendoza." 
+        title="Servicios y Soluciones" 
+        description="Ingeniería de software, plataformas a medida y sistemas de alta conversión." 
         path="/servicios" 
       />
 
@@ -28,13 +27,13 @@ export default function Servicios() {
           <div className="max-w-4xl">
             <span className="badge mb-6">Nuestra Oferta Técnica</span>
             <h1 className="text-5xl font-black tracking-tighter md:text-7xl text-white leading-[1.1]">
-              Software de alta gama para <br />
+              Ingeniería de software para <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 to-cyan-300 drop-shadow-[0_0_30px_rgba(52,211,153,0.3)]">
-                negocios reales.
+                negocios escalables.
               </span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-400">
-                Realizamos el sistema que necesites, a tu medida y a precios bajos.
+                Diseñamos y desarrollamos soluciones tecnológicas robustas que impulsan el crecimiento y optimizan los procesos de tu empresa.
             </p>
           </div>
         </div>
@@ -53,7 +52,7 @@ export default function Servicios() {
       </section>
 
       {/* Proceso de Trabajo */}
-      <Section kicker="Metodología" title="Cómo trabajamos">
+      <Section kicker="Metodología de Ingeniería" title="Cómo trabajamos">
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pasosProceso.map(({ id, t, d, icon }) => (
             <div key={id} className="card group p-8 hover:border-fuchsia-500/30">

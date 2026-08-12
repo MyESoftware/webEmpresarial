@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { SITE } from "../config/site";
-import { Terminal, Menu, X, Instagram, Linkedin } from "lucide-react";
+import { Terminal, Menu, X, Instagram } from "lucide-react";
+import { useLockedBody } from "../hooks/useLockedBody";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
 
+  // Cerrar menú al cambiar de ruta
   useEffect(() => { setIsOpen(false); }, [pathname]);
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "unset";
-  }, [isOpen]);
+  // Manejo del scroll sin scroll-jumping
+  useLockedBody(isOpen);
 
   const navLinks = [
     ["Home", "/"],
@@ -27,8 +28,8 @@ export default function Header() {
         <div className="container-safe h-full flex items-center justify-between">
           
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-400 text-white">
+          <NavLink to="/" className="flex items-center gap-3" aria-label="Ir al inicio - MyE Software">
+            <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-400 text-white" aria-hidden="true">
               <Terminal size={22} strokeWidth={3} />
             </div>
             <div className="flex flex-col text-left leading-none">
@@ -38,10 +39,11 @@ export default function Header() {
           </NavLink>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1 bg-white/5 p-1 rounded-2xl border border-white/5">
+          <nav className="hidden lg:flex items-center gap-1 bg-white/5 p-1 rounded-2xl border border-white/5" aria-label="Navegación principal">
             {navLinks.map(([label, to]) => (
               <NavLink key={to} to={to} end={to === "/"}
                 className={({ isActive }) => `rounded-lg px-4 py-2 text-sm font-bold transition-all ${isActive ? "bg-gradient-to-r from-fuchsia-500 to-cyan-400 text-white" : "text-slate-400 hover:text-white"}`}
+                aria-current={({ isActive }) => isActive ? "page" : undefined}
               >
                 {label}
               </NavLink>
@@ -50,8 +52,14 @@ export default function Header() {
 
           {/* Botón Hamburguesa (Solo abre) */}
           <div className="flex items-center gap-4 lg:hidden">
-            <button onClick={() => setIsOpen(true)} className="p-2 text-slate-100">
-              <Menu size={35} />
+            <button 
+              onClick={() => setIsOpen(true)} 
+              className="p-2 text-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400 rounded-lg"
+              aria-label="Abrir menú de navegación"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+            >
+              <Menu size={35} aria-hidden="true" />
             </button>
           </div>
 
@@ -59,18 +67,26 @@ export default function Header() {
         </div>
       </header>
 
-      {/* MENÚ MÓVIL CON LA X ADENTRO */}
-      <div className={`menu-mobile-overlay ${isOpen ? "menu-visible" : "menu-hidden"}`}>
+      {/* MENÚ MÓVIL */}
+      <div 
+        id="mobile-menu"
+        className={`menu-mobile-overlay ${isOpen ? "menu-visible" : "menu-hidden"}`}
+        aria-hidden={!isOpen}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menú móvil de navegación"
+      >
         {/* BOTÓN CERRAR INTERNO */}
         <button 
           onClick={() => setIsOpen(false)} 
-          className="absolute top-5 right-5 p-4 text-fuchsia-400 z-[1001]"
+          className="absolute top-5 right-5 p-4 text-fuchsia-400 z-[1001] focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400 rounded-lg"
+          aria-label="Cerrar menú de navegación"
         >
-          <X size={40} strokeWidth={3} />
+          <X size={40} strokeWidth={3} aria-hidden="true" />
         </button>
 
         <nav className="flex flex-col h-full pt-32 px-10 gap-8 overflow-y-auto">
-          <div className="text-[10px] font-black uppercase tracking-[0.5em] text-fuchsia-400/40">Navegación</div>
+          <div className="text-[10px] font-black uppercase tracking-[0.5em] text-fuchsia-400/40" aria-hidden="true">Navegación</div>
           
           <div className="flex flex-col gap-6 text-left">
             {navLinks.map(([label, to]) => (
@@ -78,13 +94,14 @@ export default function Header() {
                 key={to} 
                 to={to} 
                 className={({ isActive }) => `text-5xl font-black tracking-tighter ${isActive ? "text-fuchsia-400" : "text-white"}`}
+                aria-current={({ isActive }) => isActive ? "page" : undefined}
               >
                 {label}
               </NavLink>
             ))}
           </div>
 
-          <div className="h-px bg-white/10 w-full my-4" />
+          <div className="h-px bg-white/10 w-full my-4" aria-hidden="true" />
 
           <div className="space-y-6">
             <NavLink to="/contacto" className="btn btn-primary w-full py-5 text-lg font-black uppercase">
@@ -92,7 +109,9 @@ export default function Header() {
             </NavLink>
             
             <div className="flex justify-center gap-10 text-slate-500 pb-10">
-               <a href={SITE.social.instagram} target="_blank" rel="noreferrer"><Instagram size={28} /></a>
+               <a href={SITE.social.instagram} target="_blank" rel="noreferrer" aria-label="Visitar Instagram de MyE Software" className="hover:text-fuchsia-400 transition-colors">
+                 <Instagram size={28} aria-hidden="true" />
+               </a>
             </div>
           </div>
         </nav>

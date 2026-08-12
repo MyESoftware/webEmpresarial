@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, BadgeCheck, BarChart3, Bot, BriefcaseBusiness, Clock3, MessageCircleMore, MousePointerClick } from "lucide-react";
+import { ArrowRight, BadgeCheck, Code2, Server, Smartphone, MonitorSmartphone, Layers, Cpu } from "lucide-react";
 import { SITE, waLink } from "../config/site";
 
 export function TrustStrip() {
@@ -17,22 +17,27 @@ export function TrustStrip() {
   );
 }
 
-export function FunnelSection() {
-  const steps = [
+export function WhyChooseUsSection() {
+  const features = [
     {
-      icon: MousePointerClick,
-      title: "Atracción",
-      desc: "Hero con propuesta de valor clara, prueba social y CTA directo.",
+      icon: Code2,
+      title: "Stack Moderno",
+      desc: "Desarrollamos con React, Next.js y Node.js para garantizar alta velocidad y mantenibilidad a largo plazo.",
     },
     {
-      icon: BarChart3,
-      title: "Calificación",
-      desc: "Simulador de presupuesto que filtra al cliente y capta datos valiosos.",
+      icon: Server,
+      title: "Infraestructura Cloud",
+      desc: "Despliegues en AWS y Vercel con arquitecturas serverless preparadas para alta concurrencia.",
     },
     {
-      icon: MessageCircleMore,
-      title: "Conversación",
-      desc: "WhatsApp prearmado para seguir el contacto sin perder contexto.",
+      icon: Layers,
+      title: "Diseño Escalable",
+      desc: "Interfaces modulares y sistemas basados en componentes que crecen al ritmo de tu empresa.",
+    },
+    {
+      icon: Cpu,
+      title: "Optimización Continua",
+      desc: "Auditorías de rendimiento, SEO técnico y prácticas CI/CD para iteraciones seguras.",
     },
   ];
 
@@ -40,27 +45,26 @@ export function FunnelSection() {
     <section className="py-24">
       <div className="container-safe">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="badge">Embudo comercial</span>
+          <span className="badge">Por qué elegirnos</span>
           <h2 className="mt-5 text-4xl font-black tracking-tight text-white md:text-5xl">
-            Una web que no solo se ve premium: también vende.
+            Ingeniería de alto rendimiento.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-400">
-            Reordenamos la experiencia para llevar al visitante desde el interés hasta la consulta real.
+            Construimos con las mismas tecnologías y estándares de calidad que eligen las empresas líderes del sector tecnológico.
           </p>
         </div>
-        <div className="mt-14 grid gap-5 md:grid-cols-4">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {features.map((feature) => {
+            const Icon = feature.icon;
             return (
-              <article key={step.title} className="card premium-panel p-6">
-                <div className="flex items-center justify-between">
+              <article key={feature.title} className="card premium-panel p-6 hover:bg-white/[0.04]">
+                <div className="flex items-center justify-between mb-6">
                   <div className="grid h-14 w-14 place-items-center rounded-2xl bg-fuchsia-500/10 text-fuchsia-300">
                     <Icon size={24} />
                   </div>
-                  <div className="text-xs font-black tracking-[0.35em] text-slate-600">0{index + 1}</div>
                 </div>
-                <h3 className="mt-6 text-xl font-black text-white">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-400">{step.desc}</p>
+                <h3 className="text-xl font-black text-white">{feature.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">{feature.desc}</p>
               </article>
             );
           })}
@@ -76,23 +80,22 @@ export function PremiumCTA() {
       <div className="container-safe">
         <div className="card premium-panel relative overflow-hidden p-8 md:p-12">
           <div className="absolute -right-16 top-1/2 h-56 w-56 -translate-y-1/2 rounded-full bg-fuchsia-500/10 blur-3xl" />
-          <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+          <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center relative z-10">
             <div>
               <div className="flex flex-wrap items-center gap-3 text-xs font-black uppercase tracking-[0.3em] text-fuchsia-300">
-                <BadgeCheck size={16} /> Estética premium + estrategia comercial
+                <BadgeCheck size={16} /> Socios Tecnológicos
               </div>
               <h2 className="mt-5 text-3xl font-black tracking-tight text-white md:text-5xl">
-                Tu web tiene que sentirse como una agencia cara y trabajar como un vendedor senior.
+                Tecnología que respalda el crecimiento de tu empresa.
               </h2>
-          
+              <p className="mt-4 text-slate-400 max-w-xl">
+                Agenda una consultoría técnica para evaluar la viabilidad de tu proyecto y descubrir cómo podemos escalar tu negocio.
+              </p>
             </div>
-            <div className="space-y-3">
-              <a className="btn btn-primary w-full justify-center px-8" href={waLink("Hola! Quiero avanzar con una web premium para vender más. ¿La vemos?")} target="_blank" rel="noreferrer">
-                Quiero una web que venda <ArrowRight size={18} />
+            <div className="space-y-4">
+              <a className="btn btn-primary w-full justify-center px-8" href={waLink("Hola! Me gustaría agendar una consultoría técnica para mi empresa.")} target="_blank" rel="noreferrer">
+                Agendar consultoría <ArrowRight size={18} />
               </a>
-              <div className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-slate-500">
-                <Clock3 size={15} /> Cupos limitados por mes
-              </div>
             </div>
           </div>
         </div>

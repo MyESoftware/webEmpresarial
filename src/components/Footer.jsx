@@ -23,47 +23,66 @@ export default function Footer() {
                 <h3 className="text-[2.2rem] font-black tracking-[-0.04em] text-white md:text-[2.6rem]">
                   MyE Software
                 </h3>
-                <p className="mt-4 max-w-md text-lg leading-relaxed text-slate-300">
-                  Páginas web y sistemas que convierten visitas en clientes.
+                <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-400">
+                  Ingeniería de software, plataformas a medida y sistemas corporativos. Transformamos tu modelo de negocio en infraestructura digital escalable.
                 </p>
+                <div className="mt-6">
+                  <a 
+                    href="https://www.instagram.com/myesoftware/" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-300 hover:bg-fuchsia-500/20 hover:text-fuchsia-400 transition-colors"
+                    aria-label="Instagram de MyE Software"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                  </a>
+                </div>
               </div>
 
               <div>
-                <h4 className="text-sm font-black uppercase tracking-[0.32em] text-slate-400">
+                <h4 className="text-xs font-black uppercase tracking-[0.32em] text-slate-500">
                   Navegación
                 </h4>
-                <ul className="mt-6 space-y-4 text-[1.15rem] font-medium text-slate-300">
-                  <li>Servicios</li>
-                  <li>Contacto</li>
+                <ul className="mt-6 space-y-4 text-sm font-medium text-slate-300">
+                  <li><a href="/" className="hover:text-fuchsia-400 transition-colors">Inicio</a></li>
+                  <li><a href="/nosotros" className="hover:text-fuchsia-400 transition-colors">Quiénes Somos</a></li>
+                  <li><a href="/portfolio" className="hover:text-fuchsia-400 transition-colors">Portfolio</a></li>
+                  <li><a href="/contacto" className="hover:text-fuchsia-400 transition-colors">Contacto</a></li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-sm font-black uppercase tracking-[0.32em] text-slate-400">
-                  Qué resolvemos
+                <h4 className="text-xs font-black uppercase tracking-[0.32em] text-slate-500">
+                  Soluciones Técnicas
                 </h4>
-                <ul className="mt-6 space-y-4 text-[1.15rem] font-medium text-slate-300">
-                  <li>Landing pages</li>
-                  <li>Sitios web comerciales</li>
-                  <li>Tiendas y catálogos</li>
-                  <li>Sistemas a medida</li>
+                <ul className="mt-6 space-y-4 text-sm font-medium text-slate-300">
+                  <li><a href="/servicios" className="hover:text-fuchsia-400 transition-colors">Web Corporativa</a></li>
+                  <li><a href="/servicios" className="hover:text-fuchsia-400 transition-colors">E-Commerce Headless</a></li>
+                  <li><a href="/servicios" className="hover:text-fuchsia-400 transition-colors">Desarrollo a Medida / SaaS</a></li>
+                  <li><a href="/servicios" className="hover:text-fuchsia-400 transition-colors">Consultoría de Arquitectura</a></li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-sm font-black uppercase tracking-[0.32em] text-slate-400">
-                  Contacto rápido
+                <h4 className="text-xs font-black uppercase tracking-[0.32em] text-slate-500">
+                  Corporativo
                 </h4>
-                <div className="mt-6 space-y-4 text-[1.15rem] font-medium text-slate-300">
-                  <p>Mendoza, Argentina</p>
-                  <p>softwaremye@gmail.com</p>
-                  <p className="font-black text-fuchsia-300">Soporte vía WhatsApp</p>
+                <div className="mt-6 space-y-4 text-sm font-medium text-slate-300">
+                  <p className="flex items-center gap-2">Mendoza, Argentina</p>
+                  <p className="flex items-center gap-2">softwaremye@gmail.com</p>
+                  <a href="https://wa.me/5492612133276" target="_blank" rel="noreferrer" className="inline-block mt-2 font-black text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
+                    Soporte Técnico WhatsApp
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="mt-10 border-t border-white/10 px-2 pb-2 pt-6 text-sm text-slate-400 md:px-4">
-              © {new Date().getFullYear()} MyE Software
+            <div className="mt-12 flex flex-col md:flex-row items-center justify-between border-t border-white/10 px-2 pb-2 pt-6 text-xs text-slate-500 md:px-4">
+              <p>© {new Date().getFullYear()} MyE Software. Todos los derechos reservados.</p>
+              <div className="mt-4 md:mt-0 flex gap-6">
+                <a href="/" className="hover:text-slate-300 transition-colors">Políticas de Privacidad</a>
+                <a href="/" className="hover:text-slate-300 transition-colors">Términos y Condiciones</a>
+              </div>
             </div>
           </div>
         </div>

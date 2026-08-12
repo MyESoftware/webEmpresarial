@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "../components/SEO";
 import LeadCaptureWizard from "../components/LeadCaptureWizard";
 import { SITE, waLink } from "../config/site";
-import { Mail, MapPin, Share2, Video, MessageCircleMore, Bot } from "lucide-react";
+import { Mail, MapPin, Share2, Video, MessageCircleMore } from "lucide-react";
 
 export default function Contacto() {
   return (
