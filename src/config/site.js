@@ -29,16 +29,3 @@ export function waLink(
   return `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
-export function buildBudgetMessage(payload = {}) {
-  const lines = ["¡Hola! Me Gustaria Hacer una Consulta"];
-  if (payload.name) lines.push(`👤 Nombre: ${payload.name}`);
-  if (payload.business) lines.push(`🏢 Negocio: ${payload.business}`);
-  if (payload.phone) lines.push(`📱 Teléfono: ${payload.phone}`);
-  if (payload.projectType) lines.push(`💻 Tipo de proyecto: ${payload.projectType}`);
-  if (payload.pages) lines.push(`📄 Alcance: ${payload.pages}`);
-  if (payload.features?.length) lines.push(`⚙️ Funciones: ${payload.features.join(", ")}`);
-  if (payload.timeline) lines.push(`⏱️ Urgencia: ${payload.timeline}`);
-  if (payload.estimatedRange) lines.push(`💸 Rango estimado: ${payload.estimatedRange}`);
-  if (payload.notes) lines.push(`📝 Objetivo: ${payload.notes}`);
-  return lines.join("\n");
-}

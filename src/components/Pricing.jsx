@@ -5,33 +5,49 @@ import { waLink } from "../config/site";
 
 const plans = [
   {
-    name: "Web Corporativa",
-    subtitle: "Presencia digital robusta para captar consultas B2B",
-    price: "Desde ARS 160k",
+    name: "Landing Page",
+    subtitle: "Vidriera virtual de alta conversión y carga ultra veloz",
+    price: "Desde $95.000",
+    cta: "Solicitar presupuesto",
     items: [
       "Diseño UI/UX exclusivo",
       "Alta velocidad de carga (Performance)",
       "Optimización SEO inicial",
-      "Soporte y mantenimiento base",
+      "Botón directo a WhatsApp",
     ],
     highlight: false,
   },
   {
-    name: "E-Commerce / Catálogo",
-    subtitle: "Escalabilidad para negocios con alto volumen de productos",
-    price: "Desde ARS 275k",
+    name: "Web Corporativa",
+    subtitle: "Presencia digital robusta para captar consultas B2B",
+    price: "Presupuesto a medida",
+    cta: "Solicitar presupuesto",
     items: [
-      "Arquitectura preparada para tráfico alto",
-      "Integración con pasarelas de pago",
-      "Panel autogestionable",
-      "Soporte técnico preferencial",
+      "Múltiples secciones independientes",
+      "Formularios de contacto profesionales",
+      "Estructura escalable",
+      "Soporte y mantenimiento base",
     ],
     highlight: true,
   },
   {
+    name: "E-Commerce / Catálogo",
+    subtitle: "Escalabilidad para negocios con alto volumen de productos",
+    price: "Presupuesto a medida",
+    cta: "Solicitar presupuesto",
+    items: [
+      "Arquitectura preparada para tráfico alto",
+      "Panel autogestionable",
+      "Gestión de stock (si aplica)",
+      "Soporte técnico preferencial",
+    ],
+    highlight: false,
+  },
+  {
     name: "Desarrollo a Medida / SaaS",
     subtitle: "Software complejo, automatizaciones e integraciones",
-    price: "A medida",
+    price: "Presupuesto a medida",
+    cta: "Consultar proyecto",
     items: [
       "Consultoría de arquitectura de software",
       "Sistemas de gestión, reservas o dashboards",
@@ -44,7 +60,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <div className="grid gap-5 md:grid-cols-3">
+    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
       {plans.map((p) => (
         <div
           key={p.name}
@@ -61,7 +77,9 @@ export default function Pricing() {
           </div>
 
           <div className="mt-6 text-3xl font-black tracking-tight text-white">{p.price}</div>
-          <div className="mt-2 text-xs text-slate-500">Cotización final según requerimientos técnicos</div>
+          {p.price !== "Presupuesto a medida" && (
+             <div className="mt-2 text-xs text-slate-500">Cotización final según requerimientos técnicos</div>
+          )}
 
           <ul className="mt-6 flex-1 space-y-3 text-sm text-slate-300/90">
             {p.items.map((it) => (
@@ -76,11 +94,11 @@ export default function Pricing() {
 
           <a
             className={`mt-7 btn ${p.highlight ? "btn-primary" : "btn-outline"} w-full justify-center`}
-            href={waLink(`Hola! Quiero consultar por el desarrollo de un proyecto tipo: ${p.name}.`)}
+            href={waLink(`Hola! Quiero consultar por un proyecto de ${p.name}.`)}
             target="_blank"
             rel="noreferrer"
           >
-            Consultar viabilidad <ArrowRight size={18} />
+            {p.cta} <ArrowRight size={18} />
           </a>
         </div>
       ))}

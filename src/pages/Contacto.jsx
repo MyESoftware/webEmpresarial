@@ -22,7 +22,7 @@ export default function Contacto() {
                 Hablemos de un sitio que se vea mejor y venda más.
               </h1>
               <p className="mt-8 text-lg leading-relaxed text-slate-400">
-                Podés escribir directo por WhatsApp o usar el simulador de presupuesto para enviar un lead más completo.
+                Podés escribir directo por WhatsApp o completar el formulario para contarnos más sobre tu proyecto.
               </p>
             </div>
 
@@ -67,8 +67,6 @@ export default function Contacto() {
 
           <LeadCaptureWizard
             compact
-            title="Simulá el presupuesto, capturá el lead y enviá todo a WhatsApp"
-            subtitle="Este bloque ya quedó preparado para guardar leads en el navegador y también para conectarse por webhook a tu automatización externa."
           />
         </div>
       </section>
