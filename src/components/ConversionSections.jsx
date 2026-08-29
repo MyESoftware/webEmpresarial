@@ -5,7 +5,7 @@ import { SITE, waLink } from "../config/site";
 export function TrustStrip() {
   return (
     <section className="border-y border-white/5 bg-black/20">
-      <div className="container-safe grid gap-4 py-6 md:grid-cols-3 md:gap-6">
+      <div className="container-safe grid gap-4 py-6 md:grid-cols-2 md:gap-6">
         {SITE.metrics.map((item) => (
           <div key={item.label} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-center">
             <div className="text-3xl font-black tracking-tight text-white">{item.value}</div>

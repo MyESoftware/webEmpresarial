@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import Pricing from "../components/Pricing";
 import LeadCaptureWizard from "../components/LeadCaptureWizard";
@@ -47,9 +46,6 @@ export default function Home() {
               >
                 Solicitar Presupuesto
               </a>
-              <Link to="/portfolio" className="btn btn-outline w-full sm:w-auto px-8 py-4 text-base">
-                Ver Proyectos
-              </Link>
             </div>
 
             {/* Differentiators */}

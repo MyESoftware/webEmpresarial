@@ -46,7 +46,6 @@ export default function Footer() {
                 <ul className="mt-6 space-y-4 text-sm font-medium text-slate-300">
                   <li><a href="/" className="hover:text-fuchsia-400 transition-colors">Inicio</a></li>
                   <li><a href="/nosotros" className="hover:text-fuchsia-400 transition-colors">Quiénes Somos</a></li>
-                  <li><a href="/portfolio" className="hover:text-fuchsia-400 transition-colors">Portfolio</a></li>
                   <li><a href="/contacto" className="hover:text-fuchsia-400 transition-colors">Contacto</a></li>
                 </ul>
               </div>
@@ -56,10 +55,10 @@ export default function Footer() {
                   Soluciones Técnicas
                 </h4>
                 <ul className="mt-6 space-y-4 text-sm font-medium text-slate-300">
-                  <li><a href="/servicios" className="hover:text-fuchsia-400 transition-colors">Web Corporativa</a></li>
-                  <li><a href="/servicios" className="hover:text-fuchsia-400 transition-colors">E-Commerce Headless</a></li>
-                  <li><a href="/servicios" className="hover:text-fuchsia-400 transition-colors">Desarrollo a Medida / SaaS</a></li>
-                  <li><a href="/servicios" className="hover:text-fuchsia-400 transition-colors">Consultoría de Arquitectura</a></li>
+                  <li>Web Corporativa</li>
+                  <li>E-Commerce Headless</li>
+                  <li>Desarrollo a Medida / SaaS</li>
+                  <li>Consultoría de Arquitectura</li>
                 </ul>
               </div>
 
@@ -79,10 +78,6 @@ export default function Footer() {
 
             <div className="mt-12 flex flex-col md:flex-row items-center justify-between border-t border-white/10 px-2 pb-2 pt-6 text-xs text-slate-500 md:px-4">
               <p>© {new Date().getFullYear()} MyE Software. Todos los derechos reservados.</p>
-              <div className="mt-4 md:mt-0 flex gap-6">
-                <a href="/" className="hover:text-slate-300 transition-colors">Políticas de Privacidad</a>
-                <a href="/" className="hover:text-slate-300 transition-colors">Términos y Condiciones</a>
-              </div>
             </div>
           </div>
         </div>

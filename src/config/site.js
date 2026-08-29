@@ -17,7 +17,6 @@ export const SITE = {
     portfolioPdfUrl: import.meta.env.VITE_PORTFOLIO_PDF_URL || "",
   },
   metrics: [
-    { value: "+40", label: "negocios acompañados" },
     { value: "24h", label: "respuesta comercial" },
     { value: "100%", label: "sitios a medida" },
   ],
