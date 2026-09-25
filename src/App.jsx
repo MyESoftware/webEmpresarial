@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 const Servicios = lazy(() => import("./pages/Servicios"));
 const Nosotros = lazy(() => import("./pages/Nosotros"));
 const Contacto = lazy(() => import("./pages/Contacto"));
-const Propuestas = lazy(() => import("./pages/Propuestas"));
+const Productos = lazy(() => import("./pages/Productos"));
 
 export default function App() {
   return (
@@ -17,7 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/servicios" element={<Servicios />} />
-          <Route path="/propuestas" element={<Propuestas />} />
+          <Route path="/productos" element={<Productos />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
         </Routes>

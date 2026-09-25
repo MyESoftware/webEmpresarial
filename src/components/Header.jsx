@@ -17,14 +17,14 @@ export default function Header() {
   const navLinks = [
     ["Home", "/"],
     ["Servicios", "/servicios"],
-    ["Propuestas", "/propuestas"],
+    ["Productos", "/productos"],
     ["Nosotros", "/nosotros"],
     ["Contacto", "/contacto"],
   ];
 
   return (
     <>
-      <header className="sticky top-0 z-[50] border-b border-white/5 bg-[#050505]/90 backdrop-blur-xl h-20">
+      <header className="sticky top-0 z-[50] border-b border-white/5 bg-slate-900/90 backdrop-blur-xl h-20">
         <div className="container-safe h-full flex items-center justify-between">
           
           {/* Logo */}
@@ -63,7 +63,7 @@ export default function Header() {
             </button>
           </div>
 
-          <NavLink to="/contacto" className="hidden md:flex btn btn-primary px-6">Empezar Proyecto</NavLink>
+
         </div>
       </header>
 
@@ -104,10 +104,7 @@ export default function Header() {
           <div className="h-px bg-white/10 w-full my-4" aria-hidden="true" />
 
           <div className="space-y-6">
-            <NavLink to="/contacto" className="btn btn-primary w-full py-5 text-lg font-black uppercase">
-              Empezar Proyecto
-            </NavLink>
-            
+
             <div className="flex justify-center gap-10 text-slate-500 pb-10">
                <a href={SITE.social.instagram} target="_blank" rel="noreferrer" aria-label="Visitar Instagram de MyE Software" className="hover:text-fuchsia-400 transition-colors">
                  <Instagram size={28} aria-hidden="true" />

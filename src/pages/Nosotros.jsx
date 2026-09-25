@@ -82,7 +82,7 @@ export default function Nosotros() {
                   <div className="text-8xl mb-6">🚀</div>
                   <div className="text-[10px] font-black text-fuchsia-400/60 uppercase tracking-[0.5em]">Building for the future</div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-[#0a0a0a] p-6 rounded-2xl border border-white/10 shadow-2xl hidden md:block">
+              <div className="absolute -bottom-6 -right-6 bg-slate-900 p-6 rounded-2xl border border-white/10 shadow-2xl hidden md:block">
                  <pre className="text-xs text-fuchsia-400/70 font-mono italic">
                    {`while(business.growing) {
   optimize(ux);
@@ -94,7 +94,7 @@ export default function Nosotros() {
           </div>
         </section>
 
-        <div className="mt-32 card p-10 md:p-16 bg-gradient-to-br from-[#0a0a0a] to-black border-white/5 text-center">
+        <div className="mt-32 card p-10 md:p-16 bg-gradient-to-br from-slate-900 to-black border-white/5 text-center">
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter max-w-2xl mx-auto italic">
             ¿Tenés una idea? <br /> Nosotros la bajamos a tierra.
           </h2>

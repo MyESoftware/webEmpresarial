@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import Pricing from "../components/Pricing";
 import LeadCaptureWizard from "../components/LeadCaptureWizard";
 import { WhyChooseUsSection, PremiumCTA, TrustStrip } from "../components/ConversionSections";
 import { waLink } from "../config/site";
-import { ShieldCheck, Code, Smartphone, Zap } from "lucide-react";
+import { ShieldCheck, Code, Smartphone, Zap, Store, Users } from "lucide-react";
 
 export default function Home() {
   return (
@@ -30,22 +31,26 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[4.5rem] lg:leading-[1.1] mb-8">
-              Desarrollamos software que impulsa el crecimiento de tu empresa.
+              Desarrollamos software para empresas y construimos productos tecnológicos propios.
             </h1>
 
             <p className="max-w-2xl text-lg leading-relaxed text-slate-400 md:text-xl mb-12">
-              Diseñamos y desarrollamos sistemas, aplicaciones web, tiendas online y automatizaciones para empresas que buscan optimizar procesos, fortalecer su presencia digital y crecer con tecnología confiable.
+              Diseñamos soluciones a medida para clientes e impulsamos el ecosistema digital mendocino con nuestros propios productos tecnológicos en desarrollo.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-16">
-              <a
+              <Link
+                to="/servicios"
                 className="btn w-full sm:w-auto px-8 py-4 text-base bg-white text-black hover:bg-slate-200 font-bold transition-colors"
-                href={waLink("¡Hola! Me gustaría solicitar un presupuesto.")}
-                target="_blank"
-                rel="noreferrer"
               >
-                Solicitar Presupuesto
-              </a>
+                Ver servicios
+              </Link>
+              <Link
+                to="/productos"
+                className="btn w-full sm:w-auto px-8 py-4 text-base bg-transparent text-white border border-white/20 hover:bg-white/5 font-bold transition-colors"
+              >
+                Ver productos
+              </Link>
             </div>
 
             {/* Differentiators */}
@@ -101,7 +106,7 @@ export default function Home() {
             ].map(({ icon: Icon, title, desc, color }, idx) => (
               <div 
                 key={idx} 
-                className="group relative rounded-3xl border border-white/5 bg-[#0a0a0a] p-8 transition-all hover:bg-[#111111] hover:border-white/10"
+                className="group relative rounded-3xl border border-white/5 bg-slate-900 p-8 transition-all hover:bg-slate-800 hover:border-white/10"
               >
                 <div className={`mb-6 inline-flex p-3 rounded-2xl bg-white/5 border border-white/10 ${color}`}>
                   <Icon size={28} />
@@ -127,6 +132,59 @@ export default function Home() {
             </p>
           </div>
           <Pricing />
+        </div>
+      </section>
+
+      {/* Own Products Preview */}
+      <section className="py-24 bg-slate-900/40 border-t border-white/5">
+        <div className="container-safe">
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <span className="badge mb-4">Software Studio</span>
+            <h2 className="text-4xl font-black tracking-tight text-white md:text-5xl lg:text-6xl mb-6">
+              Nuestros productos.
+            </h2>
+            <p className="text-lg leading-relaxed text-slate-400">
+              Soluciones tecnológicas propias en desarrollo para resolver problemas reales del ecosistema comercial y laboral.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+            <div className="card p-8 border border-white/5 bg-slate-800/80 hover:border-cyan-500/30 transition-all group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 rounded-xl bg-white/5 text-cyan-400">
+                  <Users size={24} />
+                </div>
+                <h3 className="text-2xl font-black text-white tracking-tight">Red Laboral</h3>
+              </div>
+              <p className="text-slate-400 mb-6 text-sm">
+                Conectando profesionales independientes con oportunidades y trabajos en Mendoza.
+              </p>
+              <div className="flex items-center justify-between mt-auto">
+                <span className="text-xs font-bold uppercase tracking-wider text-cyan-400/80 bg-cyan-400/10 px-3 py-1 rounded-full">En desarrollo</span>
+              </div>
+            </div>
+
+            <div className="card p-8 border border-white/5 bg-slate-800/80 hover:border-fuchsia-500/30 transition-all group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 rounded-xl bg-white/5 text-fuchsia-400">
+                  <Store size={24} />
+                </div>
+                <h3 className="text-2xl font-black text-white tracking-tight">Open Comercial</h3>
+              </div>
+              <p className="text-slate-400 mb-6 text-sm">
+                Sistema centralizado para que comerciantes gestionen stock, ventas y catálogo.
+              </p>
+              <div className="flex items-center justify-between mt-auto">
+                <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400/80 bg-fuchsia-400/10 px-3 py-1 rounded-full">Próximamente</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link to="/productos" className="btn btn-outline px-8 py-4 text-sm font-bold bg-white/5 hover:bg-white/10 transition-colors">
+              Conocer más sobre nuestros productos
+            </Link>
+          </div>
         </div>
       </section>
 

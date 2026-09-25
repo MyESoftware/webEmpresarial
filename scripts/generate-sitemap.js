@@ -11,6 +11,7 @@ const DOMAIN = 'https://myesoftware.com.ar';
 const routes = [
   { path: '/', priority: '1.0' },
   { path: '/servicios', priority: '0.8' },
+  { path: '/productos', priority: '0.8' },
   { path: '/contacto', priority: '0.7' },
   { path: '/nosotros', priority: '0.6' }
 ];

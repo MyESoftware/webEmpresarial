@@ -45,6 +45,7 @@ export default function Footer() {
                 </h4>
                 <ul className="mt-6 space-y-4 text-sm font-medium text-slate-300">
                   <li><a href="/" className="hover:text-fuchsia-400 transition-colors">Inicio</a></li>
+                  <li><a href="/productos" className="hover:text-fuchsia-400 transition-colors">Productos</a></li>
                   <li><a href="/nosotros" className="hover:text-fuchsia-400 transition-colors">Quiénes Somos</a></li>
                   <li><a href="/contacto" className="hover:text-fuchsia-400 transition-colors">Contacto</a></li>
                 </ul>

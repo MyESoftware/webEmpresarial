@@ -2,6 +2,7 @@ import React from "react";
 import SEO from "../components/SEO";
 import Pricing from "../components/Pricing";
 import Section from "../components/Section";
+import { Link } from "react-router-dom";
 import { Layout, Zap, Search, Settings, Code2 } from "lucide-react"; 
 
 const pasosProceso = [
@@ -70,6 +71,16 @@ export default function Servicios() {
         </div>
 
       </Section>
+
+      {/* CTA Final */}
+      <section className="py-24 border-t border-white/5">
+        <div className="container-safe text-center">
+          <h2 className="text-3xl font-black text-white mb-8">¿Listo para escalar tu negocio?</h2>
+          <Link to="/contacto" className="btn btn-primary px-10 py-5 text-lg">
+            Empezar Proyecto
+          </Link>
+        </div>
+      </section>
 
     </main>
   );
