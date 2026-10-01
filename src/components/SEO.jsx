@@ -50,6 +50,16 @@ export default function SEO({ title, description, path = "/" }) {
             },
             "sameAs": [
               SITE.social.instagram
+            ],
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Maximiliano"
+              },
+              {
+                "@type": "Person",
+                "name": "Eduardo"
+              }
             ]
           },
           {
